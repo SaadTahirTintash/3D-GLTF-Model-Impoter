@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A331DB622F9868300639A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A331DB522F9868300639A9E /* AppDelegate.swift */; };
+		4A331DB822F9868300639A9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A331DB722F9868300639A9E /* ViewController.swift */; };
+		4A331DBB22F9868300639A9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A331DB922F9868300639A9E /* Main.storyboard */; };
+		4A331DC022F9868500639A9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A331DBE22F9868500639A9E /* LaunchScreen.storyboard */; };
+		4A331DC822F9B98A00639A9E /* ModelDownloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A331DC722F9B98A00639A9E /* ModelDownloading.swift */; };
+		4A331DCA22F9B9F200639A9E /* URLDownloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A331DC922F9B9F200639A9E /* URLDownloading.swift */; };
+		4A331DCE22FADF9800639A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A331DCD22FADF9800639A9E /* Assets.xcassets */; };
+		EB4635180F5B81CF74BE4D04 /* Pods_3D_Model_Import.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE21487BBE57EE50C8ACBB9 /* Pods_3D_Model_Import.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1CE21487BBE57EE50C8ACBB9 /* Pods_3D_Model_Import.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3D_Model_Import.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2184DF41B3D7F0E305B888FA /* Pods-3D Model Import.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3D Model Import.release.xcconfig"; path = "Target Support Files/Pods-3D Model Import/Pods-3D Model Import.release.xcconfig"; sourceTree = "<group>"; };
+		4A331DB222F9868300639A9E /* 3D Model Import.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3D Model Import.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A331DB522F9868300639A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A331DB722F9868300639A9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A331DBA22F9868300639A9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A331DBF22F9868500639A9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A331DC122F9868500639A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A331DC722F9B98A00639A9E /* ModelDownloading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDownloading.swift; sourceTree = "<group>"; };
+		4A331DC922F9B9F200639A9E /* URLDownloading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDownloading.swift; sourceTree = "<group>"; };
+		4A331DCD22FADF9800639A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E5EC3FBC31C7CF964DD9167B /* Pods-3D Model Import.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3D Model Import.debug.xcconfig"; path = "Target Support Files/Pods-3D Model Import/Pods-3D Model Import.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A331DAF22F9868300639A9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB4635180F5B81CF74BE4D04 /* Pods_3D_Model_Import.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A331DA922F9868300639A9E = {
+			isa = PBXGroup;
+			children = (
+				4A331DB422F9868300639A9E /* 3D Model Import */,
+				4A331DB322F9868300639A9E /* Products */,
+				7A854116EC5D2A82811379BD /* Pods */,
+				A7F51846D8ECED91A097B55B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4A331DB322F9868300639A9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A331DB222F9868300639A9E /* 3D Model Import.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A331DB422F9868300639A9E /* 3D Model Import */ = {
+			isa = PBXGroup;
+			children = (
+				4A331DCD22FADF9800639A9E /* Assets.xcassets */,
+				4A331DB522F9868300639A9E /* AppDelegate.swift */,
+				4A331DB722F9868300639A9E /* ViewController.swift */,
+				4A331DB922F9868300639A9E /* Main.storyboard */,
+				4A331DBE22F9868500639A9E /* LaunchScreen.storyboard */,
+				4A331DC122F9868500639A9E /* Info.plist */,
+				4A331DC722F9B98A00639A9E /* ModelDownloading.swift */,
+				4A331DC922F9B9F200639A9E /* URLDownloading.swift */,
+			);
+			path = "3D Model Import";
+			sourceTree = "<group>";
+		};
+		7A854116EC5D2A82811379BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5EC3FBC31C7CF964DD9167B /* Pods-3D Model Import.debug.xcconfig */,
+				2184DF41B3D7F0E305B888FA /* Pods-3D Model Import.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A7F51846D8ECED91A097B55B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CE21487BBE57EE50C8ACBB9 /* Pods_3D_Model_Import.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A331DB122F9868300639A9E /* 3D Model Import */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A331DC422F9868500639A9E /* Build configuration list for PBXNativeTarget "3D Model Import" */;
+			buildPhases = (
+				527913CE1A94741BF4D8A800 /* [CP] Check Pods Manifest.lock */,
+				4A331DAE22F9868300639A9E /* Sources */,
+				4A331DAF22F9868300639A9E /* Frameworks */,
+				4A331DB022F9868300639A9E /* Resources */,
+				79ADEC407E6CE925259F61F8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "3D Model Import";
+			productName = "3D Model Import";
+			productReference = 4A331DB222F9868300639A9E /* 3D Model Import.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A331DAA22F9868300639A9E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Tintash;
+				TargetAttributes = {
+					4A331DB122F9868300639A9E = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 4A331DAD22F9868300639A9E /* Build configuration list for PBXProject "3D Model Import" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A331DA922F9868300639A9E;
+			productRefGroup = 4A331DB322F9868300639A9E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A331DB122F9868300639A9E /* 3D Model Import */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A331DB022F9868300639A9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A331DCE22FADF9800639A9E /* Assets.xcassets in Resources */,
+				4A331DC022F9868500639A9E /* LaunchScreen.storyboard in Resources */,
+				4A331DBB22F9868300639A9E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		527913CE1A94741BF4D8A800 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-3D Model Import-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79ADEC407E6CE925259F61F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-3D Model Import/Pods-3D Model Import-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-3D Model Import/Pods-3D Model Import-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-3D Model Import/Pods-3D Model Import-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A331DAE22F9868300639A9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A331DCA22F9B9F200639A9E /* URLDownloading.swift in Sources */,
+				4A331DC822F9B98A00639A9E /* ModelDownloading.swift in Sources */,
+				4A331DB822F9868300639A9E /* ViewController.swift in Sources */,
+				4A331DB622F9868300639A9E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4A331DB922F9868300639A9E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A331DBA22F9868300639A9E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4A331DBE22F9868500639A9E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A331DBF22F9868500639A9E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A331DC222F9868500639A9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4A331DC322F9868500639A9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A331DC522F9868500639A9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5EC3FBC31C7CF964DD9167B /* Pods-3D Model Import.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R4SFQQY84;
+				INFOPLIST_FILE = "3D Model Import/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tintash.-D-Model-Import";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A331DC622F9868500639A9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2184DF41B3D7F0E305B888FA /* Pods-3D Model Import.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R4SFQQY84;
+				INFOPLIST_FILE = "3D Model Import/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tintash.-D-Model-Import";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A331DAD22F9868300639A9E /* Build configuration list for PBXProject "3D Model Import" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A331DC222F9868500639A9E /* Debug */,
+				4A331DC322F9868500639A9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A331DC422F9868500639A9E /* Build configuration list for PBXNativeTarget "3D Model Import" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A331DC522F9868500639A9E /* Debug */,
+				4A331DC622F9868500639A9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A331DAA22F9868300639A9E /* Project object */;
+}

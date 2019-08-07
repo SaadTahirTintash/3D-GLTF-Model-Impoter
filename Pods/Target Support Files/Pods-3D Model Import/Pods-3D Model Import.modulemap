@@ -1,0 +1,6 @@
+framework module Pods_3D_Model_Import {
+  umbrella header "Pods-3D Model Import-umbrella.h"
+
+  export *
+  module * { export * }
+}
