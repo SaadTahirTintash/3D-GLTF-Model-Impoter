@@ -1,34 +1,20 @@
 PODS:
-  - Alamofire (5.0.0-beta.6)
   - GLTFSceneKit (0.1.3)
-  - GLTFSceneKitLoader (0.1.0):
-    - ModelMapper
-  - ModelMapper (10.0.0):
-    - ModelMapper/Core (= 10.0.0)
-  - ModelMapper/Core (10.0.0)
   - SSZipArchive (2.2.2)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.0.0-beta.5)
   - GLTFSceneKit
-  - GLTFSceneKitLoader
   - SSZipArchive
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Alamofire
     - GLTFSceneKit
-    - GLTFSceneKitLoader
-    - ModelMapper
     - SSZipArchive
 
 SPEC CHECKSUMS:
-  Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
   GLTFSceneKit: fbec7ef104128201bde53ac5bc37c8a05d764cdf
-  GLTFSceneKitLoader: 9c01a34ac5a897e174868adb5a6fa244ed87f856
-  ModelMapper: a8dbf2a2003bf626627b9fe7c9a22b3405a30404
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
 
-PODFILE CHECKSUM: 34ea88bf6b9835c05653d141a9d25556e9fdb60f
+PODFILE CHECKSUM: 0931059e3dbc25dc80e3a658a3e061e6033136ea
 
 COCOAPODS: 1.7.2

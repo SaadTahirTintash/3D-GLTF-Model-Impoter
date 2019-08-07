@@ -1,6 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-3D Model Import/Pods-3D Model Import-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/GLTFSceneKit/GLTFSceneKit.framework
-${BUILT_PRODUCTS_DIR}/GLTFSceneKitLoader/GLTFSceneKitLoader.framework
-${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework
 ${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework

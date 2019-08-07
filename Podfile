@@ -7,9 +7,7 @@ target '3D Model Import' do
 
   # Pods for 3D Model Import
 
-  pod		'GLTFSceneKitLoader'
   pod		'SSZipArchive'
-  pod   'Alamofire'           ,   '~> 5.0.0-beta.5'
   pod   'GLTFSceneKit'
 
 end
