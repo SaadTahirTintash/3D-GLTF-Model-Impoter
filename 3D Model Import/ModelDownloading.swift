@@ -47,17 +47,13 @@ extension ModelDownloading {
                 return
             }
             
-            //Find the gltf file from the directory
-            guard let urlArray = self.contentsOf(folder: URL(string: unzipFileDirectory)!) else {
-                failure("No contetnts found in Url")
-                return
-            }
-            
+            //Create an unzip file directory url
             guard let unzipFileDirectoryUrl = URL(string: unzipFileDirectory) else {
                 failure("URL Creation Failed!")
                 return
             }
             
+            //Find the gltf file from the directory url
             guard let modelUrl = self.findContents(of: unzipFileDirectoryUrl, with: "gltf") else {
                 return
             }
