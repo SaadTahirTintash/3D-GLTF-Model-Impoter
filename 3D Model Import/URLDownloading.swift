@@ -18,6 +18,7 @@ extension URLDownloading {
     
     func downloadResource(from fileUrl: URL, success: @escaping(success), failure: @escaping(failure)) {
         
+        //TODO: Caching
         let task = URLSession.shared.downloadTask(with: fileUrl) { (localUrl, response, error) in
             guard let localUrl = localUrl else {
                 guard let error = error else {

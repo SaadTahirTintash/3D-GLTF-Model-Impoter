@@ -24,27 +24,23 @@ fileprivate let modelPath = "http://storage.3dconfigurator.net.s3.amazonaws.com/
 
 class ViewController: UIViewController, ModelDownloading {
     
-    var scene = SCNScene()
     var sceneView: SCNView!
+    var scene = SCNScene()
+    
+    var cameraNode: SCNNode!
+    var cameraOrbit: SCNNode!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         createSceneView()
-//
-//        do {
-//            let sceneSource = try GLTFSceneSource(named: "1011861466_11861466_GLTF/1011861466_11861466")
-//            scene     = try sceneSource.scene()
-//
-//            configureScene()
-//
-//        } catch {
-//            print("\(error.localizedDescription)")
-//            return
-//        }
-        
         downloadModelFile()
         
+    }
+    
+    func createSceneView() {
+        sceneView = SCNView(frame: self.view.frame)
+        self.view.addSubview(sceneView)
     }
     
     func downloadModelFile() {
@@ -65,41 +61,66 @@ class ViewController: UIViewController, ModelDownloading {
         }
     }
     
-    func createSceneView() {
-        sceneView = SCNView(frame: self.view.frame)
-        self.view.addSubview(sceneView)
-    }
-    
     func configureScene(modelNode: SCNNode) {
+        
         sceneView.scene = scene
+        sceneView.backgroundColor = UIColor.gray
         
-        let cameraNode = createCamera()
+//        cameraNode = createCamera()
+        cameraNode = createOrthographicCamera()
         let lightNode  = createLight()
-        let planeNode  = createPlane()
+//        let planeNode  = createPlane()
         
-        addConstraint(to: cameraNode,target: modelNode)
+//        addConstraint(to: cameraNode,target: modelNode)
         addConstraint(to: lightNode, target: modelNode)
         addAmbientLight(to: cameraNode)
+        addCameraOrbit(to: cameraNode)
         
-        scene.rootNode.addChildNode(cameraNode)
+//        scene.rootNode.addChildNode(cameraNode)
+        scene.rootNode.addChildNode(cameraOrbit)
         scene.rootNode.addChildNode(lightNode)
         scene.rootNode.addChildNode(modelNode)
-        scene.rootNode.addChildNode(planeNode)
+//        scene.rootNode.addChildNode(planeNode)
+    }
+    
+    func createOrthographicCamera() -> SCNNode {
+        
+        let camera = SCNCamera()
+        camera.usesOrthographicProjection = true
+        camera.orthographicScale = 1
+        
+        cameraNode = SCNNode()
+        cameraNode.position = SCNVector3(x: 0, y: 0, z: 50)
+        cameraNode.camera = camera
+        
+        return cameraNode
+    }
+    
+    func addCameraOrbit(to cameraNode: SCNNode) {
+        
+        cameraOrbit = SCNNode()
+        cameraOrbit.eulerAngles.x -= 30
+        cameraOrbit.eulerAngles.y -= 30
+        
+        cameraOrbit.addChildNode(cameraNode)
     }
     
     func createCamera() -> SCNNode {
+        
         let camera          = SCNCamera()
-        let cameraNode      = SCNNode()
+        let cameraNode      = SCNNode()        
+        
         cameraNode.camera   = camera
-        cameraNode.position = SCNVector3(-1, 1, 1)
+        cameraNode.position = SCNVector3(0.5, 1, 1)
+        
         return cameraNode
     }
     
     func createLight() -> SCNNode {
         let light            = SCNLight()
         light.type           = SCNLight.LightType.spot
-        light.spotInnerAngle = 30
-        light.spotOuterAngle = 80
+        light.spotInnerAngle = 20
+        light.spotOuterAngle = 50
         light.castsShadow    = true
         
         let lightNode       = SCNNode()
@@ -118,10 +139,10 @@ class ViewController: UIViewController, ModelDownloading {
     
     func createPlane() -> SCNNode {
         let plane       = SCNPlane(width: 50, height: 50)
-        addMaterial(to: plane, color: .green)
+        addMaterial(to: plane, color: .gray)
         
         let planeNode           = SCNNode(geometry: plane)
-        planeNode.position      = SCNVector3(0,-0.5,0)
+        planeNode.position      = SCNVector3(0,-0.05,0)
         planeNode.eulerAngles   = SCNVector3(GLKMathDegreesToRadians(-90), 0, 0)
         return planeNode
     }
@@ -144,5 +165,34 @@ class ViewController: UIViewController, ModelDownloading {
         ambientLight.color  = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         to.light            = ambientLight
     }
+    
+    private var lastPosition : (Float,Float) = (0,0)
+    private var speed : Float = 0.01
+    
+    @IBAction func panGesture(_ sender: UIPanGestureRecognizer) {
+        
+        let translation = sender.translation(in: self.view)
+        print("Translation: \(translation)")
+        print("LastPos:     \(lastPosition)")
+        print("CameraRot:   \(cameraOrbit.eulerAngles)")
+        print("----------------")
+        
+        cameraOrbit.eulerAngles.y = lastPosition.0 + -Float(translation.x) * speed
+        cameraOrbit.eulerAngles.x = lastPosition.1 + -Float(translation.y) * speed
+        
+        if sender.numberOfTouches < 1 {
+            print("Touches Ended at translation: \(translation)")
+            lastPosition = (cameraOrbit.eulerAngles.y,cameraOrbit.eulerAngles.x)
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("Touch Began")
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("Touch Ended")
+    }
+    
 }
 

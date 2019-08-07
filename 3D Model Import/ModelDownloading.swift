@@ -17,6 +17,8 @@ extension ModelDownloading {
     
     func downloadModel(fileName: String, success: @escaping((URL)->Void), failure: @escaping((String)->Void)) {
         
+        //TODO: Caching
+        
         //Create a url session to download zip file from link
         guard let fileUrl = URL(string: fileName) else {
             return
