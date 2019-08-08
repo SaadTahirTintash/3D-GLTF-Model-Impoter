@@ -58,6 +58,7 @@ class ViewController: UIViewController, ModelDownloading {
                 print("\(error.localizedDescription)")
                 return
             }
+            print("HEY!")
             
         }) { (errorMsg) in
             print(errorMsg)
