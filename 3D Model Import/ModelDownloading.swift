@@ -40,13 +40,19 @@ extension ModelDownloading {
                 return
             }
             
-            //Unzip the file from downloaded location e.g. local url to destination e.g. unzip file directory
-            let isSuccessful = SSZipArchive.unzipFile(atPath: localUrl.path, toDestination: unzipFileDirectory)
             
-            //Check for success
-            guard isSuccessful else {
-                failure("Unzzipping Failed!")
-                return
+            //success is nil means the file was found in cache
+            //don't unzip it, just read from the directory
+            //if not nil then unzip file
+            if let localUrl = localUrl {
+                //Unzip the file from downloaded location e.g. local url to destination e.g. unzip file directory
+                let isSuccessful = SSZipArchive.unzipFile(atPath: localUrl.path, toDestination: unzipFileDirectory)
+                
+                //Check for success
+                guard isSuccessful else {
+                    failure("Unzzipping Failed!")
+                    return
+                }
             }
             
             //Create an unzip file directory url

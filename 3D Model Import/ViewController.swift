@@ -24,11 +24,16 @@ fileprivate let modelPath = "http://storage.3dconfigurator.net.s3.amazonaws.com/
 
 class ViewController: UIViewController, ModelDownloading {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     var sceneView: SCNView!
     var scene = SCNScene()
     
     var cameraNode: SCNNode!
     var cameraOrbit: SCNNode!
+    
+    private var lastCameraRotation : (Float,Float) = (0,0)
+    private var speed : Float = 0.01
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +49,11 @@ class ViewController: UIViewController, ModelDownloading {
     }
     
     func downloadModelFile() {
-        
+
         downloadModel(fileName: modelPath, success: { [weak self] (modelUrl) in
-            
             do {
                 let sceneSource = try GLTFSceneSource(path: modelUrl.path)
                 self?.configureScene(modelNode: try sceneSource.scene().rootNode)
-                
             } catch {
                 print("\(error.localizedDescription)")
                 return
@@ -99,9 +102,11 @@ class ViewController: UIViewController, ModelDownloading {
     func addCameraOrbit(to cameraNode: SCNNode) {
         
         cameraOrbit = SCNNode()
-        cameraOrbit.eulerAngles.x -= 30
-        cameraOrbit.eulerAngles.y -= 30
+        cameraOrbit.eulerAngles.x -= 0.5
+        cameraOrbit.eulerAngles.y = 0.65
         
+        lastCameraRotation = (cameraOrbit.eulerAngles.y,cameraOrbit.eulerAngles.x)
+
         cameraOrbit.addChildNode(cameraNode)
     }
     
@@ -166,33 +171,23 @@ class ViewController: UIViewController, ModelDownloading {
         to.light            = ambientLight
     }
     
-    private var lastPosition : (Float,Float) = (0,0)
-    private var speed : Float = 0.01
     
-    @IBAction func panGesture(_ sender: UIPanGestureRecognizer) {
+    @IBAction func panGesture(_ gesture: UIPanGestureRecognizer) {
         
-        let translation = sender.translation(in: self.view)
-        print("Translation: \(translation)")
-        print("LastPos:     \(lastPosition)")
-        print("CameraRot:   \(cameraOrbit.eulerAngles)")
-        print("----------------")
+        //TODO: Camera Orbit check for null
         
-        cameraOrbit.eulerAngles.y = lastPosition.0 + -Float(translation.x) * speed
-        cameraOrbit.eulerAngles.x = lastPosition.1 + -Float(translation.y) * speed
+        let translation = gesture.translation(in: self.view)
         
-        if sender.numberOfTouches < 1 {
-            print("Touches Ended at translation: \(translation)")
-            lastPosition = (cameraOrbit.eulerAngles.y,cameraOrbit.eulerAngles.x)
+        cameraOrbit.eulerAngles.y = lastCameraRotation.0 + -Float(translation.x) * speed
+        cameraOrbit.eulerAngles.x = lastCameraRotation.1 + -Float(translation.y) * speed
+        
+        if gesture.numberOfTouches < 1 {
+            lastCameraRotation = (cameraOrbit.eulerAngles.y,cameraOrbit.eulerAngles.x)
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("Touch Began")
+    @IBAction func pinchGesture(_ gesture: UIPinchGestureRecognizer) {
+        print("Scale: \(gesture.scale)")
     }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("Touch Ended")
-    }
-    
 }
 

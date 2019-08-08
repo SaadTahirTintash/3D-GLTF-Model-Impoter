@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="33f-EL-Nj3">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,6 +24,7 @@
                             <outletCollection property="gestureRecognizers" destination="Zkg-F0-Zoa" appends="YES" id="VyJ-s3-2RX"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="6Ik-4C-OtZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="Zkg-F0-Zoa">
@@ -31,7 +32,63 @@
                         <action selector="panGesture:" destination="BYZ-38-t0r" id="DWk-ae-569"/>
                     </connections>
                 </panGestureRecognizer>
+                <pinchGestureRecognizer id="vUb-Qs-6Bd">
+                    <connections>
+                        <action selector="pinchGesture:" destination="BYZ-38-t0r" id="xn4-tt-apn"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="1783" y="56"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Wp-au-eJA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="33f-EL-Nj3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1RN-P7-fZq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pxA-o1-j7s" kind="relationship" relationship="rootViewController" id="VYd-P5-Ym7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Scg-yA-Oz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="56"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SFO-SO-Pez">
+            <objects>
+                <viewController id="pxA-o1-j7s" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HwF-cH-IgN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbh-MC-kEO">
+                                <rect key="frame" x="0.0" y="420.5" width="414" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="Show me the Model"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="zhA-D0-ZpN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sbh-MC-kEO" firstAttribute="leading" secondItem="ELS-eS-nz9" secondAttribute="leading" id="ENS-Yx-2Qq"/>
+                            <constraint firstItem="Sbh-MC-kEO" firstAttribute="centerX" secondItem="HwF-cH-IgN" secondAttribute="centerX" id="W1m-gA-5R8"/>
+                            <constraint firstItem="ELS-eS-nz9" firstAttribute="trailing" secondItem="Sbh-MC-kEO" secondAttribute="trailing" id="gKw-cW-ych"/>
+                            <constraint firstItem="Sbh-MC-kEO" firstAttribute="centerY" secondItem="HwF-cH-IgN" secondAttribute="centerY" id="w3U-OS-Vib"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ELS-eS-nz9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pig-bP-gOO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2T-Ms-bA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="56"/>
         </scene>
     </scenes>
 </document>

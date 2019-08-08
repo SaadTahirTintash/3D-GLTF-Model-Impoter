@@ -10,7 +10,7 @@ import Foundation
 
 
 protocol URLDownloading {
-    typealias success = (URL)   -> Void
+    typealias success = (URL?)   -> Void
     typealias failure = (String) -> Void
 }
 
@@ -18,19 +18,24 @@ extension URLDownloading {
     
     func downloadResource(from fileUrl: URL, success: @escaping(success), failure: @escaping(failure)) {
         
-        //TODO: Caching
-        let task = URLSession.shared.downloadTask(with: fileUrl) { (localUrl, response, error) in
-            guard let localUrl = localUrl else {
-                guard let error = error else {
-                    failure("Unknown Error!")
+        if WLCacheManager.shared.getResourceUrl(fileUrl.path) == fileUrl {
+            //resource already exists
+            print("Resource already downloaded with this url")
+            success(nil)
+        } else {
+            let task = URLSession.shared.downloadTask(with: fileUrl) { (localUrl, response, error) in
+                guard let localUrl = localUrl else {
+                    guard let error = error else {
+                        failure("Unknown Error!")
+                        return
+                    }
+                    failure(error.localizedDescription)
                     return
                 }
-                failure(error.localizedDescription)
-                return
-            }
-            success(localUrl)
+                WLCacheManager.shared.setResourceUrl(fileUrl.path, url: fileUrl)
+                success(localUrl)
+            }            
+            task.resume()
         }
-        
-        task.resume()        
     }
 }

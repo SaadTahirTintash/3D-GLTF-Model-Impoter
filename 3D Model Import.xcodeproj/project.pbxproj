@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A08206322FBF6E80065A18E /* WLCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A08206222FBF6E80065A18E /* WLCacheManager.swift */; };
 		4A331DB622F9868300639A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A331DB522F9868300639A9E /* AppDelegate.swift */; };
 		4A331DB822F9868300639A9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A331DB722F9868300639A9E /* ViewController.swift */; };
 		4A331DBB22F9868300639A9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A331DB922F9868300639A9E /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		1CE21487BBE57EE50C8ACBB9 /* Pods_3D_Model_Import.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3D_Model_Import.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2184DF41B3D7F0E305B888FA /* Pods-3D Model Import.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3D Model Import.release.xcconfig"; path = "Target Support Files/Pods-3D Model Import/Pods-3D Model Import.release.xcconfig"; sourceTree = "<group>"; };
+		4A08206222FBF6E80065A18E /* WLCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLCacheManager.swift; sourceTree = "<group>"; };
 		4A331DB222F9868300639A9E /* 3D Model Import.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3D Model Import.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A331DB522F9868300639A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A331DB722F9868300639A9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,12 +69,13 @@
 			children = (
 				4A331DCD22FADF9800639A9E /* Assets.xcassets */,
 				4A331DB522F9868300639A9E /* AppDelegate.swift */,
-				4A331DB722F9868300639A9E /* ViewController.swift */,
 				4A331DB922F9868300639A9E /* Main.storyboard */,
 				4A331DBE22F9868500639A9E /* LaunchScreen.storyboard */,
 				4A331DC122F9868500639A9E /* Info.plist */,
+				4A331DB722F9868300639A9E /* ViewController.swift */,
 				4A331DC722F9B98A00639A9E /* ModelDownloading.swift */,
 				4A331DC922F9B9F200639A9E /* URLDownloading.swift */,
+				4A08206222FBF6E80065A18E /* WLCacheManager.swift */,
 			);
 			path = "3D Model Import";
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A08206322FBF6E80065A18E /* WLCacheManager.swift in Sources */,
 				4A331DCA22F9B9F200639A9E /* URLDownloading.swift in Sources */,
 				4A331DC822F9B98A00639A9E /* ModelDownloading.swift in Sources */,
 				4A331DB822F9868300639A9E /* ViewController.swift in Sources */,
